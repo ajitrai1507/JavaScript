@@ -21,14 +21,25 @@ const quotes = [
     "Start where you are. Use what you have. Do what you can. - Arthur Ashe"
 ];
 
+const btn = document.querySelector("button");
 
-function fiveSec(){
-
+btn.addEventListener('click'  , ()=>{
+    
     const para = document.querySelector("#para");
     
     const index = Math.floor(Math.random()*quotes.length);
     
     para.innerHTML = quotes[index];
-}
+})
 
-setInterval( (fiveSec), 5000)
+
+// function fiveSec(){
+
+//     const para = document.querySelector("#para");
+    
+//     const index = Math.floor(Math.random()*quotes.length);
+    
+//     para.innerHTML = quotes[index];
+// }
+
+// setInterval( (fiveSec), 5000)
