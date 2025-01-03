@@ -1,0 +1,112 @@
+/* General Body Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Gradient background for a dynamic feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Weather Container */
+.weather_container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Slight transparency for background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for Weather Container */
+.weather_container:hover {
+    transform: scale(1.05); /* Slight zoom effect when hovering */
+}
+
+/* Header */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+/* Input Field */
+#location {
+    padding: 12px;
+    width: 70%;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid #00c6ff;
+    outline: none;
+    margin-bottom: 20px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+#location:focus {
+    border-color: #0072ff;
+    box-shadow: 0 0 10px rgba(0, 114, 255, 0.5);
+}
+
+/* Button */
+button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #00c6ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0072ff;
+    transform: scale(1.05);
+}
+
+/* Weather Info Section */
+.weather-info {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    color: white;
+    /* display: none; Hidden initially */
+    transition: opacity 0.5s ease;
+}
+
+/* Display Weather Info */
+.weather-info.show {
+    /* display: block; */
+    /* opacity: 1; */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .weather_container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #location {
+        width: 80%;
+    }
+
+    button {
+        padding: 10px 25px;
+    }
+}
